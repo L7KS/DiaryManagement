@@ -8,4 +8,6 @@ include_directories(.)
 add_executable(DiaryManagement
         fichier.c
         fichier.h
-        README.md)
+        README.md
+        cell.h
+        cell.c)
