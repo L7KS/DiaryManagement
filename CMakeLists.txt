@@ -10,4 +10,6 @@ add_executable(DiaryManagement
         fichier.h
         README.md
         cell.h
-        cell.c)
+        cell.c
+        list.c
+        list.h)
