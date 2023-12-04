@@ -16,7 +16,7 @@ t_d_cell *create_cell(int val, int levels)
     cell->value = val;
     cell->nexts = malloc(sizeof(t_d_cell *)*levels+1);
     for (int i = 0; i < levels+1; ++i) {
-        *(cell->nexts+i) = NULL;
+        (cell->nexts[i]) = NULL;
     }
     return cell;
 }

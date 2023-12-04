@@ -10,9 +10,8 @@
 int main()
 {
     t_d_list list = create_empty_list(10);
-    insert_cell(&list, create_cell(3,2));
-    insert_cell(&list, create_cell(3,2));
-    insert_head(&list, create_cell(1,4));
+    insert_cell(&list, create_cell(5,4));
+    insert_head(&list, create_cell(6,5));
     display_list(list);
     return 0;
 }
