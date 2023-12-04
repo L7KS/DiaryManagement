@@ -71,9 +71,9 @@ void insert_cell(t_d_list *list, t_d_cell *cell) {
         insert_head(list, cell);
         return;
     }
-    for (int i = 0; i < cell->levels + 1; ++i) {
-        if ((list->heads[i] == NULL) || (list->heads[i] >= cell->value)) {
-            cell->nexts = list->heads[i];
+    for (int i = 0; i < cell->levels; ++i) {
+        if ((list->heads[i] == NULL) || (list->heads[i]->value>= cell->value)) {
+            cell->nexts[i] = list->heads[i];
             list->heads[i] = cell;
         } else {
             temp = list->heads[i];
@@ -125,17 +125,17 @@ int level0_search(t_d_list list, int val) {
     return 0;
 }
 
-int high_level_search(t_d_list list, t_d_cell *cell, int value) {
-    if (value == cell->value) {
+int high_level_search(t_d_list list, t_d_cell cell, int value) {
+    if (value == cell.value) {
         return 1;
     }
-    if ((cell->value < value) && (cell->levels > 0)) {
+    if ((cell.value < value) && (cell.levels > 0)) {
         for (int i = 0; i < list.max_levels; i++) {
-            list.heads[i] = cell->nexts[i];
+            list.heads[i] = cell.nexts[i];
         }
-        return high_level_search(list, cell->nexts[cell->levels - 1], value) != 0;
+        return high_level_search(list, *cell.nexts[cell.levels - 1], value) != 0;
     }
-    return high_level_search(list, list.heads[cell->levels - 1], value) != 0;
+    return high_level_search(list, *list.heads[cell.levels - 1], value) != 0;
 }
 
 
