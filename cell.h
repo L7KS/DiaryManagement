@@ -4,7 +4,6 @@
 
 #ifndef DIARYMANAGEMENT_CELL_H
 #define DIARYMANAGEMENT_CELL_H
-
 #include <stdio.h>
 
 typedef struct s_d_cell

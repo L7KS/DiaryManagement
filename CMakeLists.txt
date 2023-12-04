@@ -6,8 +6,8 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(DiaryManagement
-        fichier.c
-        fichier.h
+        main.c
+        main.h
         README.md
         cell.h
         cell.c
