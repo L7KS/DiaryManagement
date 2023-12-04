@@ -20,6 +20,6 @@ void insert_cell(t_d_list * list, t_d_cell * cell);
 t_d_list create_list(int max_levels);
 int puissance(int a, int b);
 int level0_search(t_d_list list, int val);
-int high_level_search(t_d_list lst, t_d_cell * cell, int value);
+int high_level_search(t_d_list list, t_d_cell * cell, int value);
 
 #endif //DIARYMANAGEMENT_LIST_H
