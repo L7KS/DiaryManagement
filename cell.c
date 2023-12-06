@@ -5,18 +5,16 @@
 #include <stdlib.h>
 #include "cell.h"
 
-t_d_cell *create_cell(int val, int levels)
-{
-    t_d_cell *cell = (t_d_cell *)malloc(sizeof(t_d_cell));
-    if (levels < 0)
-    {
-        levels = 0;
+ptr_cell create_cell(int val, int level){
+    ptr_cell cell = malloc(sizeof(t_d_cell));
+    if ( level < 0){
+        level = 0;
     }
-    cell->levels = levels;
+    cell->level = level;
     cell->value = val;
-    cell->nexts = malloc(sizeof(t_d_cell *)*levels+1);
-    for (int i = 0; i < levels+1; ++i) {
-        (cell->nexts[i]) = NULL;
+    cell->nexts = malloc((level+1) * sizeof(ptr_cell ));
+    for(int i = 0; i < level+1; i++){
+        *(cell->nexts+i) = NULL;
     }
     return cell;
 }

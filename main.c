@@ -9,18 +9,25 @@
 
 int main()
 {
-    t_d_cell *cell = create_cell(2,5);
-    t_d_list list = create_empty_list(10);
-    insert_head(&list, create_cell(1,3));
-    insert_cell(&list, create_cell(5,4));
-    insert_cell(&list, create_cell(7,2));
-    insert_cell(&list, create_cell(5,4));
-    insert_cell(&list, create_cell(7,9));
-    insert_cell(&list, create_cell(1,2));
-    insert_cell(&list, create_cell(6,2));
+    printf("Premiere Partie :\n");
+    printf("Creer une liste vide: \n");
+    t_d_list list = create_empty_list(9);
     display_list(list);
-    printf("Recherche de la valeur 5 dans la liste lvl 0");
-    printf("La valeur est trouve\n %d", high_level_search(list,*cell,8));
+    printf("Ajouter en tete de liste:\n");
+    t_d_list list1 = create_empty_list(3);
+    insert_head(&list1, create_cell(1,2));
+    display_list(list1);
+    printf("Ajouter une cellule dans la liste 1:\n");
+    insert_cell(&list1, create_cell(3, 1));
+    display_list(list1);
+
+    printf("Partie 2: \n");
+    printf("Creation d'une liste 2^n-1: \n ");
+    t_d_list list2 = create_list(3);
+    display_list(list2);
+    printf("Rechercher une valeur");
+    printf("\nLa valeur est trouve %d", level_0_search(list, 6));
+    //printf("\nLa valeur est trouve %d", dichotomie_research_cell(list,list.heads[4],1));
     return 0;
 }
 
