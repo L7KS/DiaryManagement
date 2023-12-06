@@ -8,13 +8,14 @@
 
 t_d_list create_empty_list(int max_level){
     t_d_list list;
-    if ( max_level <= 0){
+    if (max_level <= 0){
         max_level = 0;
     }
     list.max_level = max_level;
     list.heads = malloc(sizeof(ptr_cell)*max_level);
     for(int i = 0; i<max_level;i++){
         list.heads[i] = NULL;
+
     }
     return list;
 }
@@ -117,13 +118,16 @@ int level_0_search(t_d_list list, int val){
         }
         cell = cell->nexts[0];
     }
-
     return 0;
 }
 
 int high_level_search(t_d_list list, ptr_cell cell, int value){
+
     if(value == cell->value){
         return 1;
+    }
+    if(value>puissance(2,list.max_level)-1 || value<1){
+        return 0;
     }
     else if ((cell->value < value) && (cell->level > 0)){
         for (int i=0; i<list.max_level; i++){
@@ -131,6 +135,9 @@ int high_level_search(t_d_list list, ptr_cell cell, int value){
         }
         return high_level_search(list, cell->nexts[cell->level - 1], value) != 0;
     }
-    return high_level_search(list,list.heads[cell->level - 1], value) != 0;
+
+    else if(cell->value> value && cell->level>0) {
+        return high_level_search(list, list.heads[cell->level - 1], value) != 0;
+    }
 }
 

@@ -6,7 +6,6 @@
 #include <stdlib.h>
 #include "list.h"
 #include "cell.h"
-
 int main()
 {
     printf("Premiere Partie :\n");
@@ -21,13 +20,16 @@ int main()
     insert_cell(&list1, create_cell(3, 1));
     display_list(list1);
 
+    /*int value;
     printf("Partie 2: \n");
     printf("Creation d'une liste 2^n-1: \n ");
     t_d_list list2 = create_list(3);
     display_list(list2);
-    printf("Rechercher une valeur");
-    printf("\nLa valeur est trouve %d", level_0_search(list, 6));
-    //printf("\nLa valeur est trouve %d", dichotomie_research_cell(list,list.heads[4],1));
+    printf("Recherche d'une valeur lvl 0 :\n");
+    printf("La valeur est trouve %d", level_0_search(list2, 3));
+    printf("\nRecherche d'une valeur tous les niveaux :");
+    value= high_level_search(list2, list2.heads[4-1], 8);
+    printf("\nLa valeur est trouve %d :",value);*/
     return 0;
 }
 
