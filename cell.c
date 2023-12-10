@@ -5,6 +5,13 @@
 #include <stdlib.h>
 #include "cell.h"
 
+/**
+ * Fonction pour créer une cellule avec une valeur et un niveau spécifiés.
+ * @param val La valeur de la cellule.
+ * @param level Le niveau de la cellule.
+ * @return Une cellule avec la valeur et le niveau spécifiés.
+ */
+
 ptr_cell create_cell(int val, int level){
     ptr_cell cell = malloc(sizeof(t_d_cell));
     if ( level < 0){
