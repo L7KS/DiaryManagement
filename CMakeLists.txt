@@ -12,4 +12,5 @@ add_executable(DiaryManagement
         cell.h
         cell.c
         list.c
-        list.h)
+        list.h
+        timer.c)
