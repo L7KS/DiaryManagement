@@ -43,7 +43,7 @@ int main()
     printf("\nRecherche d'une valeur sur tous les niveaux :");
     printf("\n");
     value = high_level_search(list2, list2.heads[3-1], 8);
-    printf("\nLa valeur est trouve %d :",value);
+    printf("\nLa valeur est trouve : %d",value);
     line();
 
     return 0;
