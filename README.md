@@ -22,3 +22,9 @@ Fichiers `cell.c` et `cell.h` : contiennent les structures et les fonctions conc
 Fichiers `list.c` et `list.h` : contiennent les structures et les fonctions concernant les listes.
 
 Fichiers `timer.c` et `timer.h` : contiennent les structures et les fonctions concernant les timers.
+
+&nbsp;
+
+Fonctionnalités malheureusement indisponibles :
+
+- La partie 3 du projet.
