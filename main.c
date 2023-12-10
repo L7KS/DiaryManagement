@@ -40,9 +40,9 @@ int main()
     printf("La valeur est trouve %d", level_0_search(list2, 3));
     line();
 
-    printf("\nRecherche d'une valeur tous les niveaux :");
+    printf("\nRecherche d'une valeur sur tous les niveaux :");
     printf("\n");
-    value= high_level_search(list2, list2.heads[4-1], 8);
+    value = high_level_search(list2, list2.heads[3-1], 8);
     printf("\nLa valeur est trouve %d :",value);
     line();
 
